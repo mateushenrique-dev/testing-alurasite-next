@@ -1,13 +1,11 @@
+import { getCat } from './getCat';
+
 /* eslint-disable @next/next/no-img-element */
 export default async function Home() {
-  const response = await fetch('https://api.thecatapi.com/v1/images/search', {
-    cache: 'force-cache'
-  });
-  const data = await response.json();
-  const imageUrl = data[0].url;
+  const cat = await getCat();
 
   return (
-    <img src={imageUrl} alt="" />
+    <img src={cat} alt="" />
   );
 }
 
