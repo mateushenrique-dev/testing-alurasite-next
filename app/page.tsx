@@ -8,3 +8,5 @@ export default async function Home() {
     <img src={imageUrl} alt="" />
   );
 }
+
+export const dynamic = 'force-dynamic';
